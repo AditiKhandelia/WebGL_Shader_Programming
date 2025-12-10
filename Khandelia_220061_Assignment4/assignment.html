@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shadow Rendering</title>
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assignment.js"></script>
+</head>
+<body onload="webGLStart();">
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+    <!-- add a slider to control lightXPosition -->
+     <br>
+    <label for="lightXSlider">Control Light Position:</label>
+    <input type="range" id="lightXSlider" min="-6" max="2" step="0.1" value="-2" oninput="updateLightXPosition(this.value)" style="width: 300px; accent-color: rgb(124, 206, 250);">
+    <!-- add a checkbox to animate -->
+    <br>
+    <label for="animateCheckbox">Animate:</label>
+    <input type="checkbox" id="animateCheckbox" onchange="toggleAnimation(this.checked)" style="accent-color:rgb(124, 206, 250);">
+</body>
+</html>

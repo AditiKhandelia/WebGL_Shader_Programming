@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Different Methods of Shading in 3D Shape Generation</title>
+  <script src="glMatrix-0.9.5.min.js"></script>
+  <script src="3D_shape_generation.js"></script>
+  <style>
+    .stage { display: inline-block; }
+    #canvas { display: block; }
+    .labels {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 8px;
+      width: 100%;
+    }
+    .labels h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 1.5rem;
+      white-space: nowrap; 
+    }
+  </style>
+</head>
+<body onload="webGLStart();">
+  <div class="stage">
+    <canvas id="canvas" width="1350" height="450">
+      Your browser does not support the HTML5 canvas tag.
+    </canvas>
+    <div class="labels">
+      <h1>Per-Face Shading</h1>
+      <h1>Gouraud Shading (Per-Vertex)</h1>
+      <h1>Phong Shading (Per-Fragment)</h1>
+    </div>
+  </div>
+
+  <div style="height: 20px;"></div>
+
+  <div>
+    <label for="lightXSlider">Control Light Position:</label>
+    <input type="range" id="lightXSlider" min="-1" max="1" step="0.01" value="1" oninput="setLightXPosition(this.value)" style="width: 400px; accent-color: rgb(0, 157, 255);">
+  </div>
+  <div>
+    <label for="cameraZSlider">Control Camera Zoom:</label>
+    <input type="range" id="cameraZSlider" min="0" max="10" step="0.1" value="2.5" oninput="setCameraZPosition(this.value)" style="width: 400px; accent-color: rgb(0, 157, 255);">
+  </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    html, body { height: 100%; margin: 2; }
+  </style>
+  <script src="glMatrix-0.9.5.min.js"></script>
+  <script src="scene.js"></script>
+</head>
+<body onLoad="initCanvas()">
+  <canvas id="myCanvas" style="border: none"
+      width="800"
+      height="800"></canvas>
+  <h3>Change Draw Mode:</h3>
+  <button onclick="changeMode('point')">Point View</button>
+  <button onclick="changeMode('line')">Wireframe View</button>
+  <button onclick="changeMode('solid')">Solid View</button>
+</body>
+</html>

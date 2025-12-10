@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shadow Rendering</title>
+    <script type="text/javascript" src="glMatrix-0.9.5.min.js"></script>
+    <script type="text/javascript" src="assignment.js"></script>
+</head>
+<body onload="webGLStart();">
+    <canvas id="myCanvas" width="700" height="700"></canvas>
+    <br>
+    <br>
+    <b>Shading Mode:</b>
+    <br>
+    <br>
+    <button id="phongShading" onclick="toggleShadingMode(0)">Phong</button>
+    <button id="phongReflectionShading" onclick="toggleShadingMode(1)">Phong+Reflection</button>
+    <button id="phongShadowShading" onclick="toggleShadingMode(2)">Phong+Shadow</button>
+    <button id="phongShadowReflectionShading" onclick="toggleShadingMode(3)">Phong+Shadow+Reflection</button>
+    <br>
+    <label for="lightXSlider">Move Light:</label>
+    <input type="range" id="lightXSlider" min="-6" max="2" step="0.1" value="-2" oninput="updateLightXPosition(this.value)" style="width: 300px; accent-color: rgb(124, 206, 250);">
+</body>
+</html>
